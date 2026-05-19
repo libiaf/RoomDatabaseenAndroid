@@ -11,8 +11,7 @@ import kotlinx.coroutines.flow.Flow
 interface TaskDao {
 
     @Query(
-        "SELECT * FROM tasks"
-
+        "SELECT * FROM tasks ORDER BY creado_en DESC"
     )
 
     fun getAllTasks(): Flow<List<TaskEntity>>
