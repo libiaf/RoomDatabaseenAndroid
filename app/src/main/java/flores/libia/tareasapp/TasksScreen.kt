@@ -44,6 +44,9 @@ fun TasksScreen(
     var taskToDelete by remember {
         mutableStateOf<TaskEntity?>(null)
     }
+    val searchInput by viewModel.searchInput
+        .collectAsStateWithLifecycle()
+
 
     taskToDelete?.let { task ->
         AlertDialog(
@@ -90,6 +93,55 @@ fun TasksScreen(
                 style = MaterialTheme.typography.headlineMedium,
                 modifier = Modifier.padding(vertical = 16.dp)
             )
+            // ----- Barra de busqueda (NUEVO) -----
+            SearchBar(
+                searchInput = searchInput,
+                onSearchInputChanged = { texto ->
+                    viewModel.onSearchInputChanged(texto)
+                },
+                onSearchClicked = {
+                    viewModel.executeSearch()
+                },
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            // ----- Filtro -----
+            Row(
+                horizontalArrangement =
+                    Arrangement.spacedBy(8.dp)
+            ) {
+
+                Button(
+                    onClick = {
+                        viewModel.changeSort("recent")
+                    }
+                ) {
+                    Text("Recientes")
+                }
+
+                Button(
+                    onClick = {
+                        viewModel.changeSort("oldest")
+                    }
+                ) {
+                    Text("Antiguas")
+                }
+
+                Button(
+                    onClick = {
+                        viewModel.changeSort("az")
+                    }
+                ) {
+                    Text("A-Z")
+                }
+
+                Button(
+                    onClick = {
+                        viewModel.changeSort("za")
+                    }
+                ) {
+                    Text("Z-A")
+                }
+            }
             // ----- Lista de tareas -----
             Box(modifier = Modifier.weight(1f)) {
                 if (tasks.isEmpty()) {
