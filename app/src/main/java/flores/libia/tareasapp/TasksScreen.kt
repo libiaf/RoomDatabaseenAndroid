@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -17,6 +18,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -46,6 +48,10 @@ fun TasksScreen(
     }
     val searchInput by viewModel.searchInput
         .collectAsStateWithLifecycle()
+    val listState = rememberLazyListState()
+    LaunchedEffect(tasks) {
+        listState.scrollToItem(0)
+    }
 
 
     taskToDelete?.let { task ->
@@ -155,7 +161,7 @@ fun TasksScreen(
                         textAlign = TextAlign.Center
                     )
                 } else {
-                    LazyColumn(modifier = Modifier.fillMaxSize()) {
+                    LazyColumn(modifier = Modifier.fillMaxSize(), state = listState) {
                         items(
                             items = tasks,
                             key = { task -> task.id }
