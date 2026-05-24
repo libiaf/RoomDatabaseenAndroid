@@ -25,152 +25,152 @@ abstract class AppDatabase: RoomDatabase(){
         private val TAREAS_INICIALES = listOf(
 
             TaskEntity(
-                titulo = "Design Login Screen UI",
+                titulo = "Diseñar interfaz de Login",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Design Registration Screen UI",
+                titulo = "Diseñar interfaz de Registro",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Set up Dark Mode for the Authentication flow",
+                titulo = "Configurar modo oscuro para el flujo de autenticación",
                 completado = false
             ),
 
             TaskEntity(
-                titulo = "Configure Firebase Authentication services",
+                titulo = "Configurar servicios de Firebase Authentication",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Integrate user registration with Firebase Authentication",
+                titulo = "Integrar registro de usuarios con Firebase Authentication",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Integrate login functionality with Firebase Authentication",
+                titulo = "Integrar funcionalidad de login con Firebase Authentication",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Implement duplicate email validation during registration",
+                titulo = "Implementar validación de correos duplicados durante el registro",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Implement user input validation logic",
+                titulo = "Implementar lógica de validación de entradas de usuario",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Design and implement validation and error handling UI components",
+                titulo = "Diseñar e implementar componentes UI para validaciones y manejo de errores",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Implement validation toast messages for Login Screen",
+                titulo = "Implementar mensajes toast de validación para la pantalla de Login",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Implement user session persistence",
+                titulo = "Implementar persistencia de sesión de usuario",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Add logout functionality",
+                titulo = "Agregar funcionalidad de cierre de sesión",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Implement password reset functionality",
+                titulo = "Implementar funcionalidad de restablecimiento de contraseña",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Implement email verification functionality",
+                titulo = "Implementar funcionalidad de verificación de correo electrónico",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Design Create Visualization Screen UI",
+                titulo = "Diseñar interfaz de la pantalla Create Visualization",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Design Create Visualization Components UI",
+                titulo = "Diseñar componentes UI para Create Visualization",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Implement file size handling use case",
+                titulo = "Implementar caso de uso para manejo de tamaño de archivos",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Add file size validation logic",
+                titulo = "Agregar lógica de validación de tamaño de archivos",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Design Create Team Screen UI",
+                titulo = "Diseñar interfaz de la pantalla Create Team",
                 completado = false
             ),
 
             TaskEntity(
-                titulo = "Implement Team Name input field",
+                titulo = "Implementar campo de nombre del equipo y su validación",
                 completado = false
             ),
 
             TaskEntity(
-                titulo = "Implement Add Members",
+                titulo = "Implementar funcionalidad Add Members",
                 completado = false
             ),
 
             TaskEntity(
-                titulo = "Implement Search field for members",
+                titulo = "Implementar campo de búsqueda de miembros",
                 completado = false
             ),
 
             TaskEntity(
-                titulo = "Implement Suggested People section",
+                titulo = "Implementar sección de personas sugeridas",
                 completado = false
             ),
 
             TaskEntity(
-                titulo = "Implement Team Members list",
+                titulo = "Implementar lista de miembros del equipo",
                 completado = false
             ),
 
             TaskEntity(
-                titulo = "Implement toolbar actions for Create Team screen",
+                titulo = "Implementar acciones de toolbar para la pantalla Create Team",
                 completado = false
             ),
 
             TaskEntity(
-                titulo = "Set up Dark Mode for Create Team screen",
+                titulo = "Configurar modo oscuro para la pantalla Create Team",
                 completado = false
             ),
 
             TaskEntity(
-                titulo = "Design Coordinator-based navigation architecture",
+                titulo = "Diseñar arquitectura de navegación basada en Coordinators",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Implement Coordinator flow in Authentication module",
+                titulo = "Implementar flujo Coordinator en el módulo de autenticación",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Prepare Coordinator architecture for app-wide scalability",
+                titulo = "Preparar arquitectura Coordinator para escalabilidad en toda la aplicación",
                 completado = true
             ),
 
             TaskEntity(
-                titulo = "Apply fixes, improvements, and pull request refactors",
+                titulo = "Aplicar correcciones, mejoras y refactors en pull requests",
                 completado = true
             )
         )
